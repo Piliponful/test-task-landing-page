@@ -1,0 +1,297 @@
+extends layout
+
+block content
+  //- BEGIN HEADER SECTION
+  header.header
+    //- BEGIN LOGO SECTION
+    .topline
+      .logo
+        img.logo__img(src="img/logo.svg")
+        h1.logo__text.
+          Центр Эстетической<br>
+          стоматологии и имплантологии<br>
+          доктора иванова
+      //- END LOGO SECTION
+
+      //- BEGIN CONTACT INFO SECTION
+      address.info
+        section.address
+          img.address__img(src="img/pointer.png")
+          .address__text.
+            г.Харьков, 61002 Украина<br>
+            ул. Гвардейцев 12
+
+        section.phone
+          img.phone__img(src="img/phone.png")
+          .phone__content
+            .phone__number.phone__number--main +38 (050) 814 15 15
+            .phone__tooltip
+              .phone__subtitle посмотреть номера
+              img.phone__caret(src="img/caret.png")
+              .phone__secondary.hidden
+                .phone__number +38 (050) 814 15 15
+                .phone__number +38 (050) 814 15 15
+      //- END CONTACT INFO SECTION
+
+    section.cover
+      //- BEGIN NAVIGATION SECTION
+      nav.menu-wrapper
+        .hamburger-menu
+          .bar
+        ul.menu
+          li.menu__item: a.menu__link(href="#services") О центре
+          li.menu__item: a.menu__link(href="#call-to-action") Лечение
+          li.menu__item: a.menu__link(href="#team") Контакты
+          li.menu__item: a.menu__link(href="#location") Обратная связь
+      //- END NAVIGATION SECTION
+
+      //- BEGIN ACCENT, SELLING WORDS SECTION
+      article.headline
+        h2.headline__text.headline__text--1 Харьковский стамотологический центр
+        h1.headline__text.headline__text--2.
+          Центр эстетической стоматологии<br>
+           и имплантологии доктора Иванова
+      //- END ACCENT, SELLING WORDS SECTION
+
+      //- BEGIN CALL TO ACTION BUTTONS SECTION
+      section.btns
+        button.btn.btn--blue.btns__btn(data-remodal-target="enroll") Записаться на прием
+        p.btns__divider или
+        button.btn.btn--transparent.btns__btn(data-remodal-target="question") Задать вопрос врачу
+      //- END CALL TO ACTION BUTTONS SECTION
+
+      //- BEGIN MODALS SECTION
+      .remodal(data-remodal-id="enroll")
+        button(data-remodal-action="close").remodal-close
+        //- BEGIN ORDER FREE CONSULTATION SECTION
+        h2.order__headline Записаться на прием
+        input.order__input(type="text" placeholder="Ваше имя:")
+        br
+        input.order__input(type="text" placeholder="Ваш телефон:")
+        br
+        button.btn.btn--blue.btn--order Записаться
+        //- END ORDER FREE CONSULTATION SECTION
+        br
+        button(data-remodal-action="cancel").remodal-cancel Cancel
+        button(data-remodal-action="confirm").remodal-confirm OK
+
+      .remodal(data-remodal-id="question")
+        button(data-remodal-action="close").remodal-close
+        //- BEGIN ORDER FREE CONSULTATION SECTION
+        h2.order__headline Задать вопрос врачу
+        input.order__input(type="text" placeholder="Ваше имя:")
+        br
+        input.order__input(type="text" placeholder="Ваш телефон:")
+        br
+        button.btn.btn--blue.btn--order Задать
+        //- END ORDER FREE CONSULTATION SECTION
+        br
+        button(data-remodal-action="cancel").remodal-cancel Cancel
+        button(data-remodal-action="confirm").remodal-confirm OK
+        //- END MODALS SECTION
+
+      //- BEGIN STATISTIC SECTION
+      section.statistic: ul.statistic__list
+
+        li.statistic__item
+          p.statistic__digit 3000+
+          p.statistic__subtitle.
+            Успешно выполненных<br>
+            комплексных работ
+
+        li.statistic__item.statistic__item--subtle
+          p.statistic__digit 7
+          p.statistic__subtitle.
+            Лет на рынке.<br>
+            Работаем с 2009 г.
+
+        li.statistic__item
+          p.statistic__digit 13
+          p.statistic__subtitle.
+            Человек в штате,<br>
+            из них 5 врачей
+
+        li.statistic__item.statistic__item--subtle
+          p.statistic__digit 1000+
+          p.statistic__subtitle.
+            Количество<br>
+            постоянных клиентов
+        //- END STATISTIC SECTION
+
+  //- END HEADER SECTION
+
+  main(role="main")
+    //- BEGIN ORDER FREE CONSULTATION SECTION
+    section.order
+      h2.order__headline Закажите бесплатную консультацию у доктора
+      input.order__input.order__input--1(type="text" placeholder="Ваше имя:")
+      input.order__input(type="text" placeholder="Ваш телефон:")
+      button.btn.btn--blue.btn--order Заказать бесплатную консультацию
+    //- END ORDER FREE CONSULTATION SECTION
+
+    //- BEGIN ABOUT SECTION
+    article.about
+      h3.headline-lg.about__headline Несколько слов о нас
+      p.about__text.
+        Внедрение инновационных технологий, высококвалифицированные узкоспециализированные врачи, высочайший<br> сервис обслуживания — эти и многие другие преимущества дают право клинике доктора Иванова лидировать в<br> области эстетической стоматологии и имплантологии. Ее специалисты всегда готовы предложить своим<br>
+        пациентам рациональный вариант лечения любых заболеваний и продемонстрировать<br>
+        широчайшие возможности современной стоматологии.
+    //- END ABOUT SECTION
+
+    //- BEGIN SERVICES SECTION
+    section.services#services
+      article.services-item
+        .services-item__img-center
+          img.services-item__img(src="img/placeholder-1-full-size.png")
+          .services-item__details
+            h2.services-item__headline Имплантология - ключ к молодости и красоте
+            time.services-item__publish-date 08.09.2016
+            p.services-item__text.
+              В современном мире красивая улыбка и здоровые зубы являются символом молодости, преуспевания и неотъемлемой частью имиджа успешного человека. Но, к сожалению, мы не всегда успеваем уделять должное внимание стоматологическим проблемам, и тогда нашу улыбку портят разрушенные или отсутствующие зубы.
+            button.btn.btn--transparent.services-item__btn Читать
+        h2.services-item__headline.services-item__headline--copy Имплантология - ключ к молодости и красоте
+
+      article.services-item
+        .services-item__img-center
+          img.services-item__img(src="img/placeholder-2-full-size.png")
+          .services-item__details
+            h2.services-item__headline Нейромышечная стоматология - залог здоровой и красивой улыбки
+            time.services-item__publish-date 08.09.2016
+            p.services-item__text.
+              В современном мире красивая улыбка и здоровые зубы являются символом молодости, преуспевания и неотъемлемой частью имиджа успешного человека. Но, к сожалению, мы не всегда успеваем уделять должное внимание...
+            button.btn.btn--transparent.services-item__btn Читать
+        h2.services-item__headline.services-item__headline--copy Нейромышечная стоматология - залог здоровой и красивой улыбки
+
+      article.services-item
+        .services-item__img-center
+          img.services-item__img(src="img/placeholder-3-full-size.png")
+          .services-item__details
+            h2.services-item__headline Лазерная стоматология
+            time.services-item__publish-date 08.09.2016
+            p.services-item__text.
+              В современном мире красивая улыбка и здоровые зубы являются символом молодости, преуспевания и неотъемлемой частью имиджа успешного человека. Но, к сожалению, мы не всегда успеваем уделять должное внимание стоматологическим проблемам, и тогда нашу улыбку портят разрушенные или отсутствующие зубы.
+            button.btn.btn--transparent.services-item__btn Читать
+        h2.services-item__headline.services-item__headline--copy Лазерная стоматология
+
+      article.services-item
+        .services-item__img-center
+          img.services-item__img(src="img/placeholder-4-full-size.png")
+          .services-item__details
+            h2.services-item__headline Центр эстетической стоматологии и имплантологии доктора Иванова
+            time.services-item__publish-date 08.09.2016
+            p.services-item__text.
+              В современном мире красивая улыбка и здоровые зубы являются символом молодости, преуспевания и неотъемлемой частью имиджа успешного человека. Но, к сожалению, мы не всегда успеваем уделять должное внимание...
+            button.btn.btn--transparent.services-item__btn Читать
+        h2.services-item__headline.services-item__headline--copy Центр эстетической стоматологии и имплантологии доктора Иванова
+
+      article.services-item
+        .services-item__img-center
+          img.services-item__img(src="img/placeholder-5-full-size.png")
+          .services-item__details
+            h2.services-item__headline Почему мы лучшие
+            time.services-item__publish-date 08.09.2016
+            p.services-item__text.
+              В современном мире красивая улыбка и здоровые зубы являются символом молодости, преуспевания и неотъемлемой частью имиджа успешного человека. Но, к сожалению, мы не всегда успеваем уделять должное внимание стоматологическим проблемам, и тогда нашу улыбку портят разрушенные или отсутствующие зубы.
+            button.btn.btn--transparent.services-item__btn Читать
+        h2.services-item__headline.services-item__headline--copy Почему мы лучшие
+
+      article.services-item
+        .services-item__img-center
+          img.services-item__img(src="img/placeholder-6-full-size.png")
+          .services-item__details
+            h2.services-item__headline Центр эстетической стоматологии и имплантологии доктора Иванова
+            time.services-item__publish-date 08.09.2016
+            p.services-item__text.
+              В современном мире красивая улыбка и здоровые зубы являются символом молодости, преуспевания и неотъемлемой частью имиджа успешного человека. Но, к сожалению, мы не всегда успеваем уделять...
+            button.btn.btn--transparent.services-item__btn Читать
+        h2.services-item__headline.services-item__headline--copy Центр эстетической стоматологии и имплантологии доктора Иванова
+    //- END SERVICES SECTION
+
+    //- BEGIN CALL TO ACTION SECTION
+    section.call-to-action#call-to-action
+      h2.call-to-action__headline.
+        Мы ценим Ваше время и доверие<br>
+        и обладаем всеми знаниями, которые помогут Вам достичь совершенства!
+      a.btn.btn--blue(href="#") Читать о Наших достижениях
+        img.call-to-action__caret(src="img/double-arrow-right.png")
+    //- END CALL TO ACTION SECTION
+
+    //- BEGIN OUT TEAM SECTION
+    section.team#team
+      h3.headline-lg.team__headline Наши специалисты
+      p.team__text.
+        В нашей клинике работают высококвалифицированные узкоспециализированные врачи,<br>
+        профессионализм которых подтвержден международными<br>
+        дипломами и сертификатами
+
+      .cycle-wrapper
+        span.prev: img(src="img/arrow-left.png")
+        span.next: img(src="img/arrow-right.png")
+        .cycle-slideshow(
+          data-cycle-slides="> div"
+          data-cycle-fx = "carousel"
+          data-cycle-timeout=3000
+          data-cycle-carousel-visible=3
+          data-cycle-prev=".prev"
+          data-cycle-next=".next"
+        ).team-members
+
+          .team-members__member
+            img.team-members__img(src="img/john-doe-1.png")
+            h4.team-members__name Ванесса Сергеевна
+            p.team-members__position хирург-стоматолог
+            p.team-members__xp стаж 10 лет
+
+          .team-members__member
+            img.team-members__img(src="img/john-doe-2.png")
+            h4.team-members__name Виктор Павлович
+            p.team-members__position хирург-стоматолог
+            p.team-members__xp стаж 5 лет
+
+          .team-members__member
+            img.team-members__img(src="img/john-doe-3.png")
+            h4.team-members__name Александр Сергеевич
+            p.team-members__position хирург-стоматолог
+            p.team-members__xp стаж 8 лет
+
+          .team-members__member
+            img.team-members__img(src="img/john-doe-1.png")
+            h4.team-members__name Ванесса Сергеевна
+            p.team-members__position хирург-стоматолог
+            p.team-members__xp стаж 10 лет
+
+          .team-members__member
+            img.team-members__img(src="img/john-doe-2.png")
+            h4.team-members__name Виктор Павлович
+            p.team-members__position хирург-стоматолог
+            p.team-members__xp стаж 5 лет
+
+          .team-members__member
+            img.team-members__img(src="img/john-doe-3.png")
+            h4.team-members__name Александр Сергеевич
+            p.team-members__position хирург-стоматолог
+            p.team-members__xp стаж 8 лет
+    //- END OUT TEAM SECTION
+
+    //- BEGIN OUR LOCATION SECTION
+    section.location#location: h1.location__headline Как к нам добраться
+    //- END OUR LOCATION SECTION
+
+    //- BEGIN FOOTER SECTION
+  footer.footer
+    .footer__wrapper
+      p.footer__text Copyright &amp; 2009-2010 www.site.com - All rights reserved
+      nav.footer__nav: ul.social-links-list
+        li.social-links-list__item: img(src="img/twitter.png")
+        li.social-links-list__item: img(src="img/instagram.png")
+        li.social-links-list__item: img(src="img/facebook.png")
+    //- END FOOTER SECTION
+
+
+
+
+
+
+
+
+

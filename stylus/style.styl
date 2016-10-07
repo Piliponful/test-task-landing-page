@@ -1,0 +1,599 @@
+@import nib
+@import header
+@import fonts
+@import var
+
+// BEGIN BULIT IN STYLES RESET
+normalize-css()
+
+h1, h2, h3, h4, p
+  margin 0
+  padding 0
+ul
+  list-style-type none
+  margin 0
+
+button, input
+  border none
+  &:focus
+    outline none
+
+a
+  text-decoration none
+  color inherit
+
+a:active
+  color inherit
+
+a:hover
+  color inherit
+
+// END BULIT IN STYLES RESET
+
+.topline
+  background topline-bg
+  lost-center container-size
+  font 20.83px Lato
+  +below(995px)
+    margin-bottom 10px
+  +below(420px)
+    display none
+
+.logo
+  display inline-block
+  &__img
+    padding 1px 0
+    display inline-block
+  &__text
+    text-align left
+    relative bottom 26px
+    margin 0
+    margin-left 8px
+    font bold normal 20.83px Lato
+    color logo__text-color
+    display inline-block
+    +below(560px)
+      bottom 10px
+      text-align center
+    +below(500px)
+      position static
+      margin 0
+  +below(995px)
+    margin 10px 0 20px
+    lost-center 80%
+    padding-bottom 20px
+    border-bottom solid 1px alpha(about-border-color, .2)
+    text-align center
+    display block
+  +below(500px)
+    display block
+    margin 0 auto
+    width 400px
+    text-align center
+
+// BEGIN CONTACT INFO SECTION
+.info
+  relative bottom 30px
+  font-style normal
+  display inline-block
+  color address-color
+  line-height 25px
+  word-spacing .25px
+  font-weight bold
+  +below(995px)
+    display block
+    text-align center
+    position static
+  +below(500px)
+    display block
+    margin 0
+    position static
+
+// BEGIN LOCATION
+.address
+  margin 0 33px 0 73px
+  display inline-block
+  &__img
+    +below(560px)
+      margin 0 auto
+      display block
+      margin-bottom 10px
+  &__text
+    margin-left 9px
+    display inline-block
+  +below(1061px)
+    margin 0 20px
+  +below(995px)
+    margin-left 0
+  +below(500px)
+    padding-top 20px
+    display block
+    margin 0
+    position static
+    text-align center
+// END LOCATION
+
+// BEGIN PHONE NUMBERS
+.phone
+  &__subtitle
+    display inline-block
+  &__secondary
+    border-radius 5px
+    border solid 2px main-color
+    color main-color-2
+    margin-top 10px
+    z-index 4
+    padding 10px 0 5px 20px
+    width 190px
+    absolute top 100% left -20px
+    background alpha(darken(main-color, 50%), .9)
+  &__img
+    +below(560px)
+      margin 0 auto
+      display block
+      margin-bottom 10px
+  display inline-block
+  &__content
+    display inline-block
+  &__tooltip
+    cursor pointer
+    margin-left 9px
+    font 16.67px Lato
+    display inline-block
+    position relative
+  &__caret
+    margin-left 6px
+    vertical-align middle
+  &__number
+    &--main
+      margin-left -7px
+  +below(500px)
+    padding-top 20px
+    display block
+    margin 0
+    text-align center
+// END PHONE NUMBERS
+// END CONTACT INFO SECTION
+
+.cover
+  position relative
+  color cover-color
+  background linear-gradient(top, cover-mask, cover-mask), url(../img/header-bg.png) no-repeat center center
+  background-size cover
+  height 599px
+
+// BEGIN NAVIGATION(MENU) SECTION
+.menu-wrapper
+  transition background-color 1s
+  background-color menu-bg
+  position relative
+  height 51px
+
+.menu
+  z-index 999
+  transition height .5s
+  lost-center container-size
+  font 500 20.83px Lato
+  line-height 51px
+  font-weight 500
+  display block
+  color menu-color
+  overflow hidden
+  height 100%
+  &__item
+    cursor pointer
+    &:first-child
+      padding 0
+    display inline-block
+    padding-left 25px
+    &:hover
+      color menu__item-hover-color
+    +below(560px)
+      display block
+      text-align center
+      width 100%
+      background darken(alpha(menu-bg, .8), 40%)
+      border-top solid 1px white
+      line-height 51px
+      padding 0
+  +below(560px)
+    width 100%
+    absolute top 51px
+    height 0
+    padding 0
+// END NAVIGATION(MENU) SECTION
+
+// BEGIN ACCENT, SELLING WORDS SECTION
+.headline
+  margin-top 90px
+  text-align center
+  &__text
+    font 29.17px Lato
+    &--1
+      position relative
+      &:after
+        content ""
+        absolute bottom 0 left 50%
+        transform translateX(-50%)
+        width 140px
+        height 1px
+        background headline__text--1-border-color
+      display inline-block
+      padding-bottom 20px
+      margin-bottom 25px
+    &--2
+      font-weight bold
+      text-transform uppercase
+// END ACCENT, SELLING WORDS SECTION
+
+// BEGIN CALL TO ACTION BUTTONS SECTION
+.btns
+  text-align center
+  margin-top 60px
+  &__btn
+    +below(862px)
+      display block
+      margin 0 auto
+  &__divider
+    font 16.67px Lato
+    margin 0 10px
+    display inline-block
+    +below(862px)
+      display block
+      margin 12px auto
+// END CALL TO ACTION BUTTONS SECTION
+
+// BEGIN BUTTON STYLING
+.btn
+  color btn-color
+  font bold 25px Lato, sans-serif
+  padding 23px 26px 22px
+  &--blue
+    background btn--blue-bg
+  &--transparent
+    border solid 1px btn--transparent-border-color
+    background btn--transparent-bg
+  &--order
+    margin 31px auto 0
+    display block
+// END BUTTON STYLING
+
+// BEGIN STATISTIC SECTION
+.statistic__list
+  padding 0
+
+.statistic
+  text-align center
+  width 805.28px
+  absolute bottom 0 left 50%
+  transform translate(-50%, 50%)
+  z-index 2
+  &__digit
+    font 900 41.67px Lato
+    margin-top 21px
+  &__subtitle
+    font bold 16.67px Lato
+    margin-top 90px
+    padding-bottom 14px
+    position relative
+    &:after
+      content ""
+      absolute bottom 0 left 50%
+      transform translateX(-50%)
+      width 100px
+      height 1px
+      background statistic__item-border-color
+  &__item
+    display inline-block
+    width 201.32px
+    height 247.99px
+    background statistic__item-bg
+    &--subtle
+      background statistic__item--subtle-bg
+  +below(862px)
+    display none
+// END STATISTIC SECTION
+
+// BEGIN ORDER FREE CONSULTATION SECTION
+.order
+  text-align center
+  background order-bg
+  height 484px
+  &__headline
+    padding-top 190px
+    font bold 25px Lato
+    color order__headline-color
+    margin-bottom 50px
+    +below(862px)
+      padding-top 50px
+  &__input
+    &--1
+      margin-right 32px
+      +below(862px)
+        margin 0
+    +below(862px)
+      margin 0 auto 20px
+      display block
+    width 365px
+    padding 21px
+    font 500 20.83px Lato
+    border-radius 10px
+    background order__input-bg
+    color order__input-color
+// END ORDER FREE CONSULTATION SECTION
+
+// BEGIN ABOUT SECTION
+.about
+  lost-center container-size 0
+  word-spacing .10px
+  line-height 37.5px
+  text-align center
+  font 20.83px Lato
+  color text-color
+  &__headline
+    color headline-about
+    margin 67px 0 42px
+  &__text
+    padding-bottom 49px
+    margin-bottom 68px
+    position relative
+    &:after
+      content ""
+      absolute bottom 0 left 50%
+      transform translateX(-50%)
+      width 400px
+      height 1px
+      background about-border-color
+// END ABOUT SECTION
+
+// BEGIN SERVICES SECTION
+.services
+  lost-center 981px
+  padding-bottom 88px
+  +below(1000px)
+    lost-center 600px
+
+.services-item
+  text-align center
+  color text-color
+  font 16.67px Lato
+  position relative
+  lost-waffle 1/3 3 36px
+  &__text
+    margin-top 25px
+  &__headline
+    &--copy
+      padding-top 18px
+      font 16.67px Lato
+  &__details
+    text-align left
+    width 254px
+    font 500 12.5px Lato
+    color main-color-2
+    display none
+  &__img-center
+    lost-align center
+    overflow hidden
+    width 300px
+    height 300px
+  &__btn
+    font bold 12.5px Lato
+    margin-top 21px
+    padding 6px 8px
+  &:hover
+    .services-item__details
+      display block
+  +below(1000px)
+    lost-waffle 1/2 2 36px
+// END SERVICES SECTION
+
+// BEGIN CALL TO ACTION SECTION
+.call-to-action
+  padding 17px 0 90px
+  background linear-gradient(top, call-to-action-bg-mask, call-to-action-bg-mask), url(../img/call-to-action-bg.png) no-repeat center center
+  background-size cover
+  text-align center
+  color main-color-2
+  &__headline
+    font 900 29.17px Lato
+    margin-bottom 103px
+  &__caret
+    margin-left 13px
+// END CALL TO ACTION SECTION
+
+// BEGIN OUT TEAM SECTION
+.team
+  lost-center container-size 0
+  text-align center
+  position relative
+  padding 50px 0 83px
+  color team__text-color
+  font 25px Lato
+  &__headline
+    margin-bottom 33px
+    color team__headline-color
+    font bold 41.67px Lato
+  &__text
+    padding-bottom 32px
+    margin-bottom 62px
+    position relative
+    &:after
+      content ""
+      absolute bottom 0 left 50%
+      transform translateX(-50%)
+      width 140px
+      height 1px
+      background team-border-color
+
+.team-members
+  margin 0 auto
+  &__member
+    margin 44px
+    &:last-child
+      margin 0
+  &__name
+    margin-top 30px
+    font-weight bold
+  &__position
+  &__xp
+    font italic 20.83px Lato
+
+// BEGIN CAROUSEL(cycle2) STYLING
+.cycle-wrapper
+  position relative
+  // lost-center container-size
+
+.prev
+  cursor pointer
+  absolute top 30% left 5%
+  transform translateY(-50%)
+
+.next
+  cursor pointer
+  absolute top 30% right 5%
+  transform translateY(-50%)
+// END CAROUSEL(cycle2) STYLING
+// END OUT TEAM SECTION
+
+// BEGIN OUR LOCATION SECTION
+.location
+  background linear-gradient(top, map-mask, map-mask), url(../img/map.png) no-repeat center center
+  background-size cover
+  height 401px
+  text-align center
+  &__headline
+    display inline-block
+    padding 21px 34px 17px
+    margin-top 80px
+    font 500 33.33px Lato
+    color location__headline-color
+    background main-color-2
+// END OUR LOCATION SECTION
+
+// BEGIN FOOTER SECTION
+.footer
+  display flex
+  flex-direction row
+  align-items center
+  height 74px
+  background footer-bg
+  &__wrapper
+    lost-center container-size 0
+    width container-size
+  &__text
+    float left
+    font italic 20.83px Lato
+    color footer__text-color
+    +below(655px)
+      font-size 10.42px
+  &__nav
+    float right
+  +below(655px)
+    justify-content center
+    text-align center
+
+// BEGIN SOCIAL LINKS(.social-links-list) STYLING
+.social-links-list
+  text-align right
+  // display inline-block
+  &__item
+    &:last-child
+      margin 0
+    margin-right 7px
+    display inline-block
+  +below(655px)
+    padding 0
+    margin-top 10px
+    display block
+// END SOCIAL LINKS(.social-links-list) STYLING
+// END FOOTER SECTION
+
+// BEGIN MODAL STYLING
+// .remodal-confirm
+//   color #fff
+//   background #81c784
+
+// .remodal-confirm:hover,
+// .remodal-confirm:focus
+//   background #66bb6a
+
+// .remodal-cancel
+//   color #fff
+//   background #e57373
+
+// .remodal-cancel:hover,
+// .remodal-cancel:focus
+//   background #ef5350
+// END MODAL STYLING
+
+// BEGIN STYLING HUMBURGER ICON
+bar-width = 40px
+bar-height = 8px
+bar-spacing = 14px
+
+.hamburger-menu
+  display none
+  z-index 9999
+  absolute top 50% left 4%
+  transform translateY(-50%)
+  width bar-width
+  height bar-height + bar-spacing*2
+  cursor pointer
+  +below(560px)
+    display block
+
+.bar,
+.bar:after,
+.bar:before
+  width bar-width
+  height bar-height
+
+.bar
+  position relative
+  transform translateY(bar-spacing)
+  background rgba(255, 255, 255, 1)
+  transition all 0ms 300ms
+  &.animate
+    background transparent
+
+
+.bar:before
+  content ""
+  position absolute
+  left 0
+  bottom bar-spacing
+  background rgba(255, 255, 255, 1)
+  transition bottom 300ms 300ms cubic-bezier(.23, 1, .32, 1), transform 300ms cubic-bezier(.23, 1, .32, 1)
+
+.bar:after
+  content ""
+  position absolute
+  left 0
+  top bar-spacing
+  background rgba(255, 255, 255, 1)
+  transition top 300ms 300ms cubic-bezier(.23, 1, .32, 1), transform 300ms cubic-bezier(.23, 1, .32, 1)
+
+.bar.animate:after
+  top 0
+  transform rotate(45deg)
+  transition top 300ms cubic-bezier(.23, 1, .32, 1), transform 300ms 300ms cubic-bezier(.23, 1, .32, 1)
+
+.bar.animate:before
+  bottom 0
+  transform rotate(-45deg)
+  transition bottom 300ms cubic-bezier(.23, 1, .32, 1), transform 300ms 300ms cubic-bezier(.23, 1, .32, 1)
+// END STYLING HUMBURGER ICON
+
+// BEGIN HELPER CLASSED
+.hidden
+  display none
+
+.fixed
+  z-index 9999
+  fixed top 0
+  width 100%
+  background-color darken(alpha(menu-bg, .8), 40%)
+// END HELPER CLASSED
+
+// tnk for reading all my crappy comments.
+// Hope my code was not that bad but i know it was:D

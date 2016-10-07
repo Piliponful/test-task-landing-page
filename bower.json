@@ -1,0 +1,23 @@
+{
+  "name": "test-exercise",
+  "description": "Test assignment for job in mainCode inc:D",
+  "main": "index.js",
+  "authors": [
+    "piliponful"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-cycle2": "^2.1.6",
+    "jquery": "^3.1.1",
+    "remodal": "^1.1.0"
+  }
+}

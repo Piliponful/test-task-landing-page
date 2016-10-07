@@ -1,0 +1,23 @@
+// MIXIN FOR LOADING FONTS
+webfont(family, file, hack-chrome-windows = false, weight = normal, style = normal)
+  @font-face
+    font-family family
+    src url('../fonts/' + file + '.eot')
+    src url('../fonts/' + file + '.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/' + file + '.woff2') format('woff2'),
+        url('../fonts/' + file + '.woff') format('woff'),
+        url('../fonts/' + file + '.ttf') format('truetype'),
+    font-weight weight
+    font-style style
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url('../fonts/' + file + '.svg#'+ family) format('svg')
+
+// LOAD FONTS
+webfont("Lato", "Lato-Black", "900")
+webfont("Lato", "Lato-Italic", "normal", "italic")
+webfont("Lato", "Lato-Regular")
+webfont("Lato", "Lato-Bold", "bold")
+webfont("Lato", "Lato-Medium", "500")

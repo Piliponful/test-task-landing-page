@@ -1,0 +1,151 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$arrow_right_name = 'arrow-right';
+$arrow_right_x = 43px;
+$arrow_right_y = 69px;
+$arrow_right_offset_x = -43px;
+$arrow_right_offset_y = -69px;
+$arrow_right_width = 14px;
+$arrow_right_height = 14px;
+$arrow_right_total_width = 66px;
+$arrow_right_total_height = 91px;
+$arrow_right_image = 'sprite.png';
+$arrow_right = 43px 69px -43px -69px 14px 14px 66px 91px 'sprite.png' 'arrow-right';
+$facebook_name = 'facebook';
+$facebook_x = 43px;
+$facebook_y = 0px;
+$facebook_offset_x = -43px;
+$facebook_offset_y = 0px;
+$facebook_width = 23px;
+$facebook_height = 23px;
+$facebook_total_width = 66px;
+$facebook_total_height = 91px;
+$facebook_image = 'sprite.png';
+$facebook = 43px 0px -43px 0px 23px 23px 66px 91px 'sprite.png' 'facebook';
+$instagram_name = 'instagram';
+$instagram_x = 43px;
+$instagram_y = 23px;
+$instagram_offset_x = -43px;
+$instagram_offset_y = -23px;
+$instagram_width = 23px;
+$instagram_height = 23px;
+$instagram_total_width = 66px;
+$instagram_total_height = 91px;
+$instagram_image = 'sprite.png';
+$instagram = 43px 23px -43px -23px 23px 23px 66px 91px 'sprite.png' 'instagram';
+$phone_name = 'phone';
+$phone_x = 0px;
+$phone_y = 0px;
+$phone_offset_x = 0px;
+$phone_offset_y = 0px;
+$phone_width = 43px;
+$phone_height = 43px;
+$phone_total_width = 66px;
+$phone_total_height = 91px;
+$phone_image = 'sprite.png';
+$phone = 0px 0px 0px 0px 43px 43px 66px 91px 'sprite.png' 'phone';
+$pointer_name = 'pointer';
+$pointer_x = 0px;
+$pointer_y = 43px;
+$pointer_offset_x = 0px;
+$pointer_offset_y = -43px;
+$pointer_width = 33px;
+$pointer_height = 48px;
+$pointer_total_width = 66px;
+$pointer_total_height = 91px;
+$pointer_image = 'sprite.png';
+$pointer = 0px 43px 0px -43px 33px 48px 66px 91px 'sprite.png' 'pointer';
+$twitter_name = 'twitter';
+$twitter_x = 43px;
+$twitter_y = 46px;
+$twitter_offset_x = -43px;
+$twitter_offset_y = -46px;
+$twitter_width = 23px;
+$twitter_height = 23px;
+$twitter_total_width = 66px;
+$twitter_total_height = 91px;
+$twitter_image = 'sprite.png';
+$twitter = 43px 46px -43px -46px 23px 23px 66px 91px 'sprite.png' 'twitter';
+$spritesheet_width = 66px;
+$spritesheet_height = 91px;
+$spritesheet_image = 'sprite.png';
+$spritesheet_sprites = $arrow_right $facebook $instagram $phone $pointer $twitter;
+$spritesheet = 66px 91px 'sprite.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}

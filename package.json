@@ -1,0 +1,42 @@
+{
+  "name": "test-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "piliponful",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-gzip": "^1.4.0",
+    "gulp-image": "^2.7.0",
+    "gulp-image-resize": "^0.10.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-pug": "^3.0.4",
+    "gulp-remove-files": "0.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-stylelint": "^3.2.0",
+    "gulp-stylint": "^3.0.0",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webp": "^2.3.0",
+    "gulp.spritesmith": "^6.2.1",
+    "jstransformer-stylus": "^1.1.0",
+    "lost": "^7.1.0",
+    "nib": "^1.1.2",
+    "postcss-font-magician": "^1.4.0",
+    "postcss-responsive-type": "^0.4.0",
+    "rupture": "^0.6.1",
+    "typographic": "^2.9.3"
+  }
+}
